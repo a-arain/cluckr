@@ -1,0 +1,26 @@
+<%- include("../partials/header") %>
+
+<div class="post-cards">
+    <% for (let i of posts) { %>
+        <div class="card mb-4">
+
+            <div class="card-body">
+
+                <div class="row">
+                <div class="col-2">
+                    <img  width="100" src="/images/chicken.jpg">
+                </div>           
+                
+                <div class="col">
+                    <p class="card-text"><%= i.username %></p>
+                    <p class="card-text"></p><%= i.content %></p>
+                    <img width="550" src="<%= i.img_url %>"/>    
+                    <p> <%= i.createdAt %> </p>     
+                </div>
+                </div>
+            </div>
+            </div>
+        
+    <% } %>
+</div>
+<%- include("../partials/footer") %>
