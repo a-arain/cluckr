@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    </head>
+    <body>
+
+      <nav class="navbar navbar-expand-sm mb-4" style="border-bottom: solid 1px gray;">
+        <a class="navbar-brand" href="/clucks"> 
+            <img style="max-width:65px; margin-top: 5px;" 
+            src="/images/rooster.png"  alt="logo">
+        </a>
+
+        <div class="collapse navbar-collapse topnav justify-content-end">
+
+    <% if (loggedIn) { %>
+
+      <form class="form-inline" action="/new" method="GET">
+        <button class="btn btn-secondary" style="margin-right: 1px" type="submit">Cluck!</button>
+    </form>
+
+    <span style="color: slategrey; padding:1em">
+      <%= loggedIn %>             
+  </span>
+
+  <form class="form-inline" action="/sign_out" method="GET">
+    <button class="btn btn-secondary" type="submit">Sign Out</button>
+  </form>
+
+  </nav> 
+
+
+  <% } else { %>
+     <form class="form-inline" action="/sign_in" method="GET">
+    <button class="btn btn-secondary" type="submit" action="/sign_in" method="GET">Sign In</button>
+    </form>
+</nav>
+    
+  <% } %>
