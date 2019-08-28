@@ -1,0 +1,21 @@
+{
+  "name": "cluckr",
+  "version": "1.0.0",
+  "description": "cluckr quiz",
+  "main": "app.js",
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "knex": "^0.19.2",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.1",
+    "pg": "^7.12.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amaan Arain",
+  "license": "ISC"
+}
